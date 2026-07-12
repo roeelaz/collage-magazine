@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Issue {
+  id            String    @id @default(cuid())
+  slug          String    @unique
+  title         String
+  description   String
+  coverImageUrl String
+  pdfUrl        String
+  isFree        Boolean   @default(true)
+  priceAgorot   Int?
+  publishedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  orders        Order[]
+}
+
+model Update {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  body        String
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// Not used until a payment processor is wired up (see PLAN.md).
+// Having this table now means adding checkout later is additive, not a rewrite.
+model Order {
+  id            String   @id @default(cuid())
+  issue         Issue    @relation(fields: [issueId], references: [id])
+  issueId       String
+  buyerEmail    String
+  amountAgorot  Int
+  status        String   @default("pending")
+  downloadToken String   @unique @default(cuid())
+  createdAt     DateTime @default(now())
+}
