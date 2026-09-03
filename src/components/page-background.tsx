@@ -20,8 +20,6 @@ export function PageBackground() {
       aria-hidden
       className="fixed inset-0 -z-10 bg-cover bg-center"
       style={{ backgroundImage: `url(/backgrounds/${file})` }}
-    >
-      <div className="absolute inset-0 bg-paper/60" />
-    </div>
+    />
   );
 }
