@@ -25,6 +25,9 @@ export async function sendSubmissionEmail(data: SubmissionEmail): Promise<void> 
   ].join("\n");
 
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("SMTP not configured in production (SMTP_HOST/SMTP_USER/SMTP_PASS)");
+    }
     console.log("[mail] SMTP not configured — logging submission instead of sending:");
     console.log(text);
     return;
