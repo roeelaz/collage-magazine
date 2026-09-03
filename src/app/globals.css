@@ -44,3 +44,10 @@ h3,
 h4 {
   font-family: var(--font-serif), serif;
 }
+
+/* Content sheet: sits on the section's collage background, kept readable. */
+main > div {
+  position: relative;
+  background-color: color-mix(in srgb, var(--color-paper) 90%, transparent);
+  backdrop-filter: blur(4px);
+}

@@ -3,6 +3,7 @@ import { Frank_Ruhl_Libre, Heebo } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { PageBackground } from "@/components/page-background";
 
 const heebo = Heebo({
   variable: "--font-heebo",
@@ -39,9 +40,10 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${heebo.variable} ${frankRuhlLibre.variable} h-full antialiased`}
+      className={`${heebo.variable} ${frankRuhlLibre.variable} h-full bg-paper antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-paper text-ink">
+      <body className="flex min-h-full flex-col text-ink">
+        <PageBackground />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
