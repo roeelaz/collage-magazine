@@ -17,9 +17,8 @@ export default async function HomePage() {
         </h1>
         <p className="mt-2 text-lg text-ink-soft">כתב עת לספרות</p>
         <p className="mt-6 text-lg leading-relaxed text-ink">
-          קולאז&apos; הוא במה ליוצרות ויוצרים חדשים שטרם מצאו את מקומם
-          במוסדות הספרות המבוססים. אנחנו מפרסמים פרוזה, שירה ואיור — בלי
-          תיווך, בלי פרוטקציה, רק יצירה.
+          במה ליוצרים בתחילת דרכם הספרותית, כאלה שטרם זכו להכרה, וליוצרים
+          ויוצרות מהשוליים
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
