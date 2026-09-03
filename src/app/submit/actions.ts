@@ -8,7 +8,7 @@ const submissionSchema = z.object({
   email: z.string().trim().email("נא להזין כתובת אימייל תקינה"),
   phone: z.string().trim().min(6, "נא להזין מספר טלפון תקין"),
   workTitle: z.string().trim().min(1, "נא למלא את שם היצירה"),
-  message: z.string().trim().min(20, "נא להדביק את תוכן היצירה (או קישור אליה)"),
+  message: z.string().trim().min(1, "נא להדביק את תוכן היצירה (או קישור אליה)"),
 });
 
 export type SubmitFormState = {
