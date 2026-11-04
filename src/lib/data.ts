@@ -30,24 +30,3 @@ export function getIssueBySlug(slug: string) {
     where: { slug: decodeSlug(slug), publishedAt: { not: null } },
   });
 }
-
-export function getPublishedUpdates() {
-  return prisma.update.findMany({
-    where: { publishedAt: { not: null } },
-    orderBy: { publishedAt: "desc" },
-  });
-}
-
-export function getLatestUpdates(take: number) {
-  return prisma.update.findMany({
-    where: { publishedAt: { not: null } },
-    orderBy: { publishedAt: "desc" },
-    take,
-  });
-}
-
-export function getUpdateBySlug(slug: string) {
-  return prisma.update.findFirst({
-    where: { slug: decodeSlug(slug), publishedAt: { not: null } },
-  });
-}

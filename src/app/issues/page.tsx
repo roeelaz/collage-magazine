@@ -7,7 +7,7 @@ import { formatPrice } from "@/lib/format";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "גיליונות",
+  title: "גיליון הבכורה",
 };
 
 export default async function IssuesPage() {
@@ -15,7 +15,7 @@ export default async function IssuesPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="font-serif text-3xl font-bold text-ink">גיליונות</h1>
+      <h1 className="font-serif text-3xl font-bold text-ink">גיליון הבכורה</h1>
 
       {issues.length === 0 ? (
         <p className="mt-6 text-ink-soft">

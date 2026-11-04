@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { getLatestIssue, getLatestUpdates } from "@/lib/data";
+import { getLatestIssue } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const [latestIssue, updates] = await Promise.all([
-    getLatestIssue(),
-    getLatestUpdates(3),
-  ]);
+  const latestIssue = await getLatestIssue();
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -25,7 +22,7 @@ export default async function HomePage() {
             href="/issues"
             className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
           >
-            לגיליונות
+            לגיליון הבכורה
           </Link>
           <Link
             href="/submit"
@@ -54,40 +51,6 @@ export default async function HomePage() {
         </section>
       )}
 
-      {updates.length > 0 && (
-        <section className="mt-20">
-          <div className="flex items-center justify-between">
-            <h2 className="font-serif text-2xl font-bold text-ink">
-              עדכונים אחרונים
-            </h2>
-            <Link
-              href="/updates"
-              className="text-sm text-accent hover:text-accent-dark"
-            >
-              כל העדכונים ←
-            </Link>
-          </div>
-          <ul className="mt-6 space-y-6">
-            {updates.map((update) => (
-              <li key={update.id} className="border-b border-line pb-6">
-                <Link
-                  href={`/updates/${update.slug}`}
-                  className="font-serif text-xl text-ink hover:text-accent"
-                >
-                  {update.title}
-                </Link>
-                {update.publishedAt && (
-                  <p className="mt-1 text-sm text-ink-soft">
-                    {new Intl.DateTimeFormat("he-IL", {
-                      dateStyle: "long",
-                    }).format(update.publishedAt)}
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
     </div>
   );
 }

@@ -2,8 +2,7 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "/", label: "בית" },
-  { href: "/issues", label: "גיליונות" },
-  { href: "/updates", label: "עדכונים" },
+  { href: "/issues", label: "גיליון הבכורה" },
   { href: "/about", label: "מי אנחנו" },
   { href: "/submit", label: "הגשת יצירות" },
 ];
