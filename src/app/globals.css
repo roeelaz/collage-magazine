@@ -18,7 +18,7 @@
   --color-accent-dark: var(--color-accent-dark);
   --color-line: var(--color-line);
   --color-card: var(--color-card);
-  --font-sans: var(--font-frank-ruhl);
+  --font-sans: var(--font-heebo);
   --font-serif: var(--font-frank-ruhl);
 }
 
@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: var(--font-sans), serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 h1,
@@ -74,4 +74,12 @@ main > div {
     min-height: 0;
     margin-block: 0;
   }
+}
+
+/* Glass card: lets the collage show through, blurred (used on גיליון הבכורה). */
+main > div.glass {
+  background-color: color-mix(in srgb, var(--color-paper) 55%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgb(255 255 255 / 0.35);
 }

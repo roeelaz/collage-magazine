@@ -14,14 +14,21 @@ export default async function IssuesPage() {
   const issues = await getPublishedIssues();
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
+    <div className="glass mx-auto max-w-5xl px-6 py-16">
       <h1 className="font-serif text-3xl font-bold text-ink">גיליון הבכורה</h1>
 
-      {issues.length === 0 ? (
-        <p className="mt-6 text-ink-soft">
-          הגיליון הראשון בדרך — עקבו אחרינו לעדכונים.
-        </p>
-      ) : (
+      <p className="mt-6 text-lg text-ink">
+        גיליון הבכורה של קולאז׳ כאן — חינם
+      </p>
+      <Link
+        href="/issues/premiere/download"
+        prefetch={false}
+        className="mt-8 inline-block rounded-full bg-accent px-8 py-4 text-base font-medium text-white shadow-lg transition-colors hover:bg-accent-dark"
+      >
+        להורדת הגיליון (PDF)
+      </Link>
+
+      {issues.length > 0 && (
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {issues.map((issue) => (
             <Link
