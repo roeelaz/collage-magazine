@@ -17,7 +17,7 @@ export default async function HomePage() {
           במה ליוצרים בתחילת דרכם הספרותית, כאלה שטרם זכו להכרה, וליוצרים
           ויוצרות מהשוליים
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             href="/issues"
             className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
