@@ -62,9 +62,10 @@ main > div {
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
 
-/* Mobile: the card covers the full width, so leave empty space after it to scroll into and see the collage. */
+/* Mobile: shrink the card to its content and inset it, so the collage shows around and below it. */
 @media (max-width: 639px) {
-  main {
-    padding-bottom: 70vh;
+  main > div {
+    width: calc(100% - 2rem);
+    min-height: 0;
   }
 }
