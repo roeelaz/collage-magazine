@@ -18,7 +18,7 @@ export default async function IssuesPage() {
       <h1 className="font-serif text-3xl font-bold text-ink">גיליון הבכורה</h1>
 
       <p className="mt-6 text-lg text-ink">
-        גיליון הבכורה של קולאז׳ כאן — חינם
+        גיליון הבכורה של קולאז׳ זמין להורדה כאן
       </p>
       <div className="mt-8 text-center">
         <Link

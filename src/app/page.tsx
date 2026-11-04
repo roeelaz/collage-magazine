@@ -17,6 +17,14 @@ export default async function HomePage() {
           במה ליוצרים בתחילת דרכם הספרותית, כאלה שטרם זכו להכרה, וליוצרים
           ויוצרות מהשוליים
         </p>
+        <p className="mt-6 text-lg font-bold text-ink">
+          הקול הקורא לגיליון השני פתוח עד 14.12
+        </p>
+        <p className="mt-2 leading-relaxed text-ink">
+          נושא: מקומות מסתור. לאן אתם נעלמים כשאתם נעלמים? ממי ומה אתם
+          מבקשים להתחבא? ספרו לנו על חדרי מדרגות, מקלטים, כבישים סואנים
+          ופינות קטנטנות.
+        </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             href="/issues"
