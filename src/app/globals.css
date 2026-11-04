@@ -66,7 +66,7 @@ main > div::before {
   left: 1rem;
   height: 6rem;
   aspect-ratio: 1071 / 1940;
-  background: url("/backgrounds/thm.jpeg") center / cover;
+  background: url("/backgrounds/thm.png") center / cover;
   border-radius: 0.5rem;
   opacity: 0.9;
 }
