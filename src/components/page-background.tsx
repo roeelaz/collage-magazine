@@ -7,7 +7,7 @@ const BACKGROUNDS: Record<string, string> = {
   "": "collage_1.jpeg",
   issues: "collage_2.jpeg",
   about: "collage_3.jpeg",
-  submit: "collage_4.jpeg",
+  submit: "collage_5.jpeg",
 };
 
 export function PageBackground() {
