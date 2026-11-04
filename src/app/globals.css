@@ -45,9 +45,8 @@ main {
 
 main > div {
   width: fit-content; /* card hugs its text (pages still cap it with max-w-*) */
-  padding-inline: 1rem; /* sides close to the text (pages' own px-6 was 1.5rem) */
+  padding: 1.25rem 1rem; /* tight around the text on all sides (pages' own px-6 py-16 were much larger) */
   margin-block: auto;
-  min-height: 65vh;
   border-radius: 1.25rem;
   background-color: color-mix(in srgb, var(--color-paper) 55%, transparent);
   backdrop-filter: blur(28px);
