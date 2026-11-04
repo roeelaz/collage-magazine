@@ -20,8 +20,8 @@
   --color-accent-dark: var(--color-accent-dark);
   --color-line: var(--color-line);
   --color-card: var(--color-card);
-  --font-sans: var(--font-heebo);
-  --font-serif: var(--font-frank-ruhl);
+  --font-sans: var(--font-alef);
+  --font-serif: var(--font-alef);
 }
 
 body {
