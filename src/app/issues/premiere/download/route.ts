@@ -19,5 +19,9 @@ export async function GET() {
     pathname: PATHNAME,
     access: "private",
   });
-  return NextResponse.redirect(presignedUrl);
+  // download=1 makes Blob send Content-Disposition: attachment (save, not open).
+  // It isn't part of the signature, so the signed URL stays valid.
+  const url = new URL(presignedUrl);
+  url.searchParams.set("download", "1");
+  return NextResponse.redirect(url);
 }

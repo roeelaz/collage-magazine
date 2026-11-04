@@ -20,13 +20,15 @@ export default async function IssuesPage() {
       <p className="mt-6 text-lg text-ink">
         גיליון הבכורה של קולאז׳ כאן — חינם
       </p>
-      <Link
-        href="/issues/premiere/download"
-        prefetch={false}
-        className="mt-8 inline-block rounded-full bg-accent px-8 py-4 text-base font-medium text-white shadow-lg transition-colors hover:bg-accent-dark"
-      >
-        להורדת הגיליון (PDF)
-      </Link>
+      <div className="mt-8 text-center">
+        <Link
+          href="/issues/premiere/download"
+          prefetch={false}
+          className="inline-block rounded-full bg-accent px-8 py-4 text-base font-medium text-white shadow-lg transition-colors hover:bg-accent-dark"
+        >
+          להורדת הגיליון (PDF)
+        </Link>
+      </div>
 
       {issues.length > 0 && (
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

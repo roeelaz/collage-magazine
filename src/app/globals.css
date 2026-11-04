@@ -54,13 +54,12 @@ main {
 }
 
 main > div {
-  width: 100%;
+  width: fit-content; /* card hugs its text (pages still cap it with max-w-*) */
   margin-block: auto;
   min-height: 65vh;
   border-radius: 1.25rem;
   background-color: color-mix(in srgb, var(--color-paper) 55%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(28px);
   border: 1px solid rgb(255 255 255 / 0.35);
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
