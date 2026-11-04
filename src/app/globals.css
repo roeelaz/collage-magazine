@@ -54,6 +54,23 @@ main > div {
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
 
+/* Small drawing in the card's free top-left corner (text is right-aligned in RTL). */
+main > div {
+  position: relative;
+}
+
+main > div::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 6rem;
+  aspect-ratio: 1071 / 1940;
+  background: url("/backgrounds/thm.jpeg") center / cover;
+  border-radius: 0.5rem;
+  opacity: 0.9;
+}
+
 /* Mobile: text first, then the collage is revealed as you scroll past the card. */
 @media (max-width: 639px) {
   main {
