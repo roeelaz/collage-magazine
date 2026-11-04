@@ -45,6 +45,7 @@ main {
 
 main > div {
   width: fit-content; /* card hugs its text (pages still cap it with max-w-*) */
+  padding-inline: 1rem; /* sides close to the text (pages' own px-6 was 1.5rem) */
   margin-block: auto;
   min-height: 65vh;
   border-radius: 1.25rem;
