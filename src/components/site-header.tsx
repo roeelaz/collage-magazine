@@ -9,7 +9,7 @@ const NAV_LINKS = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-line bg-paper">
+    <header className="border-b-2 border-accent bg-paper">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-5">
         <Link href="/" className="font-serif text-2xl font-bold text-ink">
           קולאז&apos;
