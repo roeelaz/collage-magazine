@@ -79,3 +79,10 @@ main > div::before {
     margin-block: 0;
   }
 }
+
+/* Desktop: more breathing room inside the card (mobile stays tight). */
+@media (min-width: 640px) {
+  main > div {
+    padding: 2.75rem 3rem;
+  }
+}
