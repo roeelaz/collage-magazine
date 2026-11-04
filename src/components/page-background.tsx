@@ -4,11 +4,10 @@ import { usePathname } from "next/navigation";
 
 // One collage per top-level section, shown full-bleed behind the content sheet.
 const BACKGROUNDS: Record<string, string> = {
-  "": "collage-red-pink-desk.jpeg",
-  issues: "collage-magazine-cutouts.jpeg",
-  updates: "collage-pink-squares-ink.jpeg",
-  about: "collage-figure-copper-wire.jpeg",
-  submit: "watercolor-seascape-window.jpeg",
+  "": "collage_1.jpeg",
+  issues: "collage_2.jpeg",
+  about: "collage_3.jpeg",
+  submit: "collage_4.jpeg",
 };
 
 export function PageBackground() {

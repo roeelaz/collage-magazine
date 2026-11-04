@@ -14,7 +14,7 @@ export default async function IssuesPage() {
   const issues = await getPublishedIssues();
 
   return (
-    <div className="glass mx-auto max-w-5xl px-6 py-16">
+    <div className="mx-auto max-w-5xl px-6 py-16">
       <h1 className="font-serif text-3xl font-bold text-ink">גיליון הבכורה</h1>
 
       <p className="mt-6 text-lg text-ink">

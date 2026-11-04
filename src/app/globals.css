@@ -45,7 +45,7 @@ h4 {
   font-family: var(--font-serif), serif;
 }
 
-/* Content sheet: a solid paper card floating centered over the section's collage. */
+/* Content sheet: a frosted-glass card floating centered over the section's collage. */
 main {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,10 @@ main > div {
   margin-block: auto;
   min-height: 65vh;
   border-radius: 1.25rem;
-  background-color: var(--color-paper);
+  background-color: color-mix(in srgb, var(--color-paper) 55%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgb(255 255 255 / 0.35);
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
 
@@ -74,12 +77,4 @@ main > div {
     min-height: 0;
     margin-block: 0;
   }
-}
-
-/* Glass card: lets the collage show through, blurred (used on גיליון הבכורה). */
-main > div.glass {
-  background-color: color-mix(in srgb, var(--color-paper) 55%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgb(255 255 255 / 0.35);
 }
