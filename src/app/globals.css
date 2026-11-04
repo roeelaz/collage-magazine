@@ -62,11 +62,11 @@ main > div {
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
 
-/* Mobile: open on the collage; the text block rises over it as you scroll. */
+/* Mobile: text first, then the collage is revealed as you scroll past the card. */
 @media (max-width: 639px) {
   main {
-    padding-top: 70svh;
-    padding-bottom: 25svh;
+    padding-top: 2rem;
+    padding-bottom: 80svh;
   }
 
   main > div {
