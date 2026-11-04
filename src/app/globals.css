@@ -61,3 +61,17 @@ main > div {
   background-color: var(--color-paper);
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
+
+/* Mobile: open on the collage; the text block rises over it as you scroll. */
+@media (max-width: 639px) {
+  main {
+    padding-top: 70svh;
+    padding-bottom: 25svh;
+  }
+
+  main > div {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    margin-block: 0;
+  }
+}
