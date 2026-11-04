@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Frank_Ruhl_Libre, Heebo } from "next/font/google";
+import { Frank_Ruhl_Libre } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBackground } from "@/components/page-background";
 
-const heebo = Heebo({
-  variable: "--font-heebo",
-  subsets: ["hebrew", "latin"],
-});
-
 const frankRuhlLibre = Frank_Ruhl_Libre({
   variable: "--font-frank-ruhl",
   subsets: ["hebrew", "latin"],
-  weight: ["500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +34,7 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${heebo.variable} ${frankRuhlLibre.variable} h-full bg-paper antialiased`}
+      className={`${frankRuhlLibre.variable} h-full bg-paper antialiased`}
     >
       <body className="flex min-h-full flex-col text-ink">
         <PageBackground />
