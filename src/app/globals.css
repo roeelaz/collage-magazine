@@ -54,21 +54,15 @@ main > div {
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.4);
 }
 
-/* Small drawing in the card's free top-left corner (text is right-aligned in RTL). */
-main > div {
-  position: relative;
-  padding-top: 6rem; /* room so the drawing never touches the first line of text */
-}
-
+/* Small drawing at the card's top-left, level with the headline; text wraps around it. */
 main > div::before {
   content: "";
-  position: absolute;
-  top: 1.75rem;
-  left: 1.75rem;
+  float: left;
   height: 7.5rem;
-  aspect-ratio: 1071 / 1940;
+  aspect-ratio: 400 / 725;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
   background: url("/backgrounds/thm.png") center / cover;
-  border-radius: 0.5rem;
   opacity: 0.9;
 }
 
